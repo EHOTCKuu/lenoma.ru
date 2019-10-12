@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <title>LENOMA.RU</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="block-header">
+      <div class="block-header__top-row">
+        <a href="#">О магазине</a>
+        <a href="#">Оплата</a>
+        <a href="#">Доставка</a>
+        <a href="#">Отзывы</a>
+        <a href="#">Новости</a>
+        <a href="#">Статьи</a>
+        <a href="#">Контакты</a>
+        <a href="#" class="top-row__cabinet">Личный кабинет</a>
+        <a href="#" class="top-row__like">Избранное<sup>2</sup></a>
+      </div>
+
+      <div class="block-header__center-row">
+        <a href="index.html" class="center-row__logo">
+          <svg preserveAspectRatio="xMidYMid" viewBox="0 0 201 113">
+            <image width="201" height="113" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMkAAABxCAMAAABIgXcvAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADAFBMVEUAAADBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGcAAABdhogZAAAA/nRSTlMADpfk9M5kAWrU/qUTm7GJqL7L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"></image>
+          </svg>
+        </a>
+
+        <div class="center-row__helper">
+          <form action="" method="get" class="helper__search-form">
+            <input name="s" placeholder="Поиск по каталогу товаров" type="search">
+            <button type="submit">
+              <svg preserveAspectRatio="xMidYMid" viewBox="0 0 14 14">
+                <image width="14" height="14" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAq1BMVEUAAADBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGcAAADbwzwWAAAAN3RSTlMANajh9OSwS1/v2JB2lNH2brITnfdQx7yRenhiSeWMdfgQ00ygiXDIfGSCvsoZUr/1+X1KEsNd309CQwAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAACCSURBVAjXTczZEoIwDEDRABUERRShuKCAqCibu/n/P7Np62gebubMpAUAw7TYwHZAzdD1RmN/EkylDHcW0p5HMS3TC9UVT6jWQj9aMipbaa4xFd1sNbO8ELV3mgmnltFe6oBH9UVenc51g9h20v3lirfq3n4NxeMJ0P0sR5jDv1/vDw/rClQ06ERtAAAAAElFTkSuQmCC"></image>
+              </svg>
+            </button>
+          </form>
+
+          <div class="helper__bottom-info">
+            <a href="tel:+74955420595" class="bottom-info__tel"> +7 /495/ 542-05-95 </a>
+            <a href="#" class="bottom-info__feedback">
+              <svg preserveAspectRatio="xMidYMid" viewBox="0 0 9 11">
+                <image width="9" height="11" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAALCAMAAACah1cpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAdVBMVEUAAADBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGcAAAAfZ+B+AAAAJXRSTlMAlOf4K+9wmvfqQtJ9iuQOHvqrA3+8eeuYBwKlxAF8+dwghvY193/H8AAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABLSURBVAjXJcpVEoAwFEPRh0uB4u6Q/W+R0tyvM5mI43q+2AIgpABEVIwkpRQyQnIUmior1A3ZAl0/jJPIvOBvNeO2H0anPVy3et4P2jcFZd6Zvc0AAAAASUVORK5CYII="></image>
+              </svg>
+              Обратный звонок
+            </a>
+            <a href="mailto:Info@Lenoma.ru" class="bottom-info__mail">
+              <svg preserveAspectRatio="xMidYMid" viewBox="0 0 14 11">
+                <image width="14" height="11" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAALCAMAAAB4W0xQAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAdVBMVEUAAADBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGcAAAAfZ+B+AAAAJXRSTlMAv/prQGyy8C3xsTLmIyTnsDAJwNwZGt0ID87WS80VtP4UDmS89KkqpwAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABeSURBVAjXTc5HEoAgEETRBnPOGRWVuf8VFVPxF131dg1GRgzELfvN4QRyPR93fhBejMI40UqzPLpYlFXdAG3H+kITwzgJMc0DHmJZpXQ3fAT2Xe/PJ83D/jsIynylTkNmCoph7PFbAAAAAElFTkSuQmCC"></image>
+              </svg>
+              Info@Lenoma.ru
+            </a>
+            <span class="bottom-info__time">
+              <svg preserveAspectRatio="xMidYMid" viewBox="0 0 14 14">
+                <image width="14" height="14" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAADBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGcAAAAWGM5oAAAAGXRSTlMAHpDbmWT25YrPsDaVjAeU4ziHV6rhVR9S0+7DiQAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABsSURBVAjXPY/bEoAgCAWPmlaUZtqN///RNMl9YGYHBg4AoLThAT/WjdNMWNZm7AOIpKecL7XpBugYuu6ASeha4FzrcRLRdW+iz1E1sww3kpFVHyFqOfThnZIYtefZtpAx5ZyisxKsvMBGl0m8ttwEg3OB2Z0AAAAASUVORK5CYII="></image>
+              </svg>
+              Пн—пт 9.00—21.00
+            </span>
+          </div>
+        </div>
+        <a href="#" class="center-row__store">
+          <svg preserveAspectRatio="xMidYMid" viewBox="0 0 32 41">
+            <image width="32" height="41" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAApCAMAAABjq9sOAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAclBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAABe5mfWAAAAJHRSTlMAGYzZ+lj1UfeaXRDu3SR2/Cy9stp/4HCl7/D+na9Qkuk2h8NibN27AAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKBJREFUOMvt07cOgzAUhWE6Bkwvptfz/s+YxGApwyUoUpZI/NOR7jd4saa9pRumZZmGrp1kO5A5Nn13Aeb5vscAl7oHHGH0GlEIHhAgRpLuK00QEyBDrmaOjAAFSjVLFASoINQUqL4AddPudWDHahm6YzW1houeoBcyjkEcDeD76CUYz98w/hZM86LAMk8EoLrBDf4UrONpqwQXn3f7fN8eTeg0sTsQtHYAAAAASUVORK5CYII="></image>
+          </svg>
+        </a>
+      </div>
+
+      <div class="block-header__bottom-row">
+        <a href="#">Акция</a>
+        <a href="#">Парфюмерия</a>
+        <a href="#">Новинки</a>
+        <a href="#">Макияж</a>
+        <a href="#">Уход за кожей</a>
+        <a href="#">Уход за волосами</a>
+        <div class="bottom-row__man-menu">
+          <a href="#" class="man-menu__legend">Для мужчин</a>
+          <div class="man-menu__modal-forman">
+            <ul>
+              <li><a href="#">Мужские ароматы</a></li>
+              <li><a href="#">Дезодоранты</a></li>
+              <li><a href="#">Гели для душа</a></li>
+              <li><a href="#">Шампуни и кондиционеры</a></li>
+            </ul>
+          </div>
+        </div>
+        <a href="#">Organic</a>
+        <a href="#">Подарки</a>
+        <a href="#" class="bottom-row__sale">Sale</a>
+      </div>
+    </header>
+    <main>
+      <div class="block-slider">
+        <div class="block-slider__slider">
+          <h2>Идеальный аромат от Giorgio Armani</h2>
+          <a href="#" class="slider__more">Подробнее</a>
+          <div class="slider__recomendation">
+            <ul>
+              <li class="recomendation__top"><a href="#">Наши рекомендации</a></li>
+              <li class="recomendation__sub"><a href="#">Интересное предложения</a></li>
+              <li class="recomendation__sub"><a href="#">Женская Парфюмерия</a></li>
+              <li class="recomendation__sub"><a href="#">Товар со скидками</a></li>
+            </ul>
+          </div>
+          <div class="slider__img">
+            <img src="img/promo-logo.png" alt="Духи Жорика Армяни" width="110" height="278">
+            <div class="img__price">от 4 990 Р.-</div>
+          </div>
+          <div class="slider__pins">
+            <div class="pins__on"></div>
+            <div class="pins__off"></div>
+            <div class="pins__off"></div>
+          </div>
+        </div>
+        <div class="block-slider__bottom-info">
+          <div class="bottom-info_text">Оригинальная продукция</div>
+          <div class="bottom-info_text">Бесплатная доставка по Москве и России</div>
+          <div class="bottom-info_text">Система скидок</div>
+          <div class="bottom-info_text">Срочная доставка</div>
+        </div>
+      </div>
+      <div class="block-hits">
+        <div class="block-hits__legend">Хиты продаж</div>
+        <div class="block-hits__hit-slider">
+          <div class="unit__left-arrow">
+            <svg preserveAspectRatio="xMidYMid" viewBox="0 0 19 32">
+              <image width="19" height="32" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAgCAMAAADHYLP9AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAtFBMVEUAAADBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGcAAAAgeC5yAAAAOnRSTlMAAYqiA5euBni5CmrDD139zBVR+tUcRvbcJDzx5Csy6zMqI0fUUl5reYi4wsvTIikxOkRPW2n+d5mLS8rK+AAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAACnSURBVCjPhdLJEoJADARQcAEZQUBEEFDc9323///DnHOHKub4qqaSdGKYjWbLoNcGLJusA8BRhF2NrkfY84EgJOxHwCAmHCZAOiLMcqAYE05KoJwSzgogzwjnKZAsCOMlEK0IwwDw14Seq0faECpH45bQtjTuak3txV/vIGqER9FLfBI9n+VsF5nBVWZ1k5neZfYPuaOn3OXrLXb+qbiNb8UNmT9xa38c2BrB1hCBKQAAAABJRU5ErkJggg=="></image>
+            </svg>
+          </div>
+          <div class="hit-slider__unit border-line">
+            <picture>
+              <source type="image/webp" srcset="img/unit1.webp">
+              <source type="image/jpeg" srcset="img/unit1.jpg">
+              <img src="img/unit1.jpg" alt="Духи Флёр Наркотик" width="260" height="259">
+            </picture>
+            <div class="unit__sale">Sale</div>
+            <div class="unit__name">Fleur Narcotique</div>
+            <div class="unit__description">
+              <div class="description__manufacturer">Ex Nihilo</div>
+              <div class="description__kind">Парфюмированная вода</div>
+              <div class="description__gender">Женская</div>
+            </div>
+            <div class="unit__price"><span class="price__old"> &emsp;8 990 Р.&emsp; </span>от 4 990 Р.-</div>
+          </div>
+          <div class="hit-slider__unit border-line">
+            <picture>
+              <source type="image/webp" srcset="img/unit4.webp">
+              <source type="image/jpeg" srcset="img/unit4.jpg">
+              <img src="img/unit4.jpg" alt="Духи 100% Любовь" width="235" height="236">
+            </picture>
+            <div class="unit__name">100% Love</div>
+            <div class="unit__description">
+              <div class="description__manufacturer">Ex Nihilo</div>
+              <div class="description__kind">Парфюмированная вода</div>
+              <div class="description__gender">Женская</div>
+            </div>
+            <div class="unit__price">от 2 390 Р.-</div>
+          </div>
+
+          <div class="hit-slider__unit border-line">
+            <picture>
+              <source type="image/webp" srcset="img/unit3.webp">
+              <source type="image/jpeg" srcset="img/unit3.jpg">
+              <img src="img/unit3.jpg" alt="Духи 10 Корсо комо" width="234" height="234">
+            </picture>
+
+            <div class="unit__name">10 Corso como</div>
+            <div class="unit__description">
+              <div class="description__manufacturer">Ex Nihilo</div>
+              <div class="description__kind">Парфюмированная вода</div>
+              <div class="description__gender">Женская</div>
+            </div>
+            <div class="unit__price">от 7 890 Р.-</div>
+          </div>
+          <div class="hit-slider__unit">
+            <picture>
+              <source type="image/webp" srcset="img/unit2.webp">
+              <source type="image/jpeg" srcset="img/unit2.jpg">
+              <img src="img/unit2.jpg" alt="Духи 1881 Коллекция" width="211" height="211">
+            </picture>
+
+            <div class="unit__name">1881 Collection</div>
+            <div class="unit__description">
+              <div class="description__manufacturer">Ex Nihilo</div>
+              <div class="description__kind">Парфюмированная вода</div>
+              <div class="description__gender">Женская</div>
+            </div>
+            <div class="unit__price">от 3 270 Р.-</div>
+          </div>
+          <div class="unit__right-arrow">
+            <svg preserveAspectRatio="xMidYMid" viewBox="0 0 19 32">
+              <image width="19" height="32" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAgCAMAAADHYLP9AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAtFBMVEUAAADBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGcAAAAgeC5yAAAAOnRSTlMAAYqiA5euBni5CmrDD139zBVR+tUcRvbcJDzx5Csy6zMqI0fUUl5reYi4wsvTIikxOkRPW2n+d5mLS8rK+AAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAACnSURBVCjPhdLJEoJADARQcAEZQUBEEFDc9323///DnHOHKub4qqaSdGKYjWbLoNcGLJusA8BRhF2NrkfY84EgJOxHwCAmHCZAOiLMcqAYE05KoJwSzgogzwjnKZAsCOMlEK0IwwDw14Seq0faECpH45bQtjTuak3txV/vIGqER9FLfBI9n+VsF5nBVWZ1k5neZfYPuaOn3OXrLXb+qbiNb8UNmT9xa38c2BrB1hCBKQAAAABJRU5ErkJggg=="></image>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="block-news">
+        <div class="block-news__legend">Новинки</div>
+        <div class="block-news__news-slider">
+          <div class="news-slider__left-arrow">
+            <svg preserveAspectRatio="xMidYMid" viewBox="0 0 19 32">
+              <image width="19" height="32" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAgCAMAAADHYLP9AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAtFBMVEUAAADBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGcAAAAgeC5yAAAAOnRSTlMAAYqiA5euBni5CmrDD139zBVR+tUcRvbcJDzx5Csy6zMqI0fUUl5reYi4wsvTIikxOkRPW2n+d5mLS8rK+AAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAACnSURBVCjPhdLJEoJADARQcAEZQUBEEFDc9323///DnHOHKub4qqaSdGKYjWbLoNcGLJusA8BRhF2NrkfY84EgJOxHwCAmHCZAOiLMcqAYE05KoJwSzgogzwjnKZAsCOMlEK0IwwDw14Seq0faECpH45bQtjTuak3txV/vIGqER9FLfBI9n+VsF5nBVWZ1k5neZfYPuaOn3OXrLXb+qbiNb8UNmT9xa38c2BrB1hCBKQAAAABJRU5ErkJggg=="></image>
+            </svg>
+          </div>
+          <div class="news-slider__new-unit border-line__new">
+            <picture>
+              <source type="image/webp" srcset="img/unit8.webp">
+              <source type="image/jpeg" srcset="img/unit8.jpg">
+              <img src="img/unit8.jpg" alt="Духи Агнер Чёрной" width="234" height="234">
+            </picture>
+
+            <div class="new-unit__name">Aigner Black</div>
+            <div class="new-unit__new-description">
+              <div class="new-description__manufacturer">Ex Nihilo</div>
+              <div class="new-description__kind">Парфюмированная вода</div>
+              <div class="new-description__gender">Женская</div>
+            </div>
+            <div class="new-unit__price">от 6 780 Р.-</div>
+          </div>
+          <div class="news-slider__new-unit border-line__new">
+            <picture>
+              <source type="image/webp" srcset="img/unit7.webp">
+              <source type="image/jpeg" srcset="img/unit7.jpg">
+              <img src="img/unit7.jpg" alt="Духи Агнер Чёрной Ледяные капли" width="235" height="236">
+            </picture>
+
+            <div class="new-unit__name">Aigner Black Icedrops</div>
+            <div class="new-unit__new-description">
+              <div class="new-description__manufacturer">Ex Nihilo</div>
+              <div class="new-description__kind">Парфюмированная вода</div>
+              <div class="new-description__gender">Женская</div>
+            </div>
+            <div class="new-unit__price">от 2 990 Р.-</div>
+          </div>
+
+          <div class="news-slider__new-unit border-line__new">
+            <picture>
+              <source type="image/webp" srcset="img/unit6.webp">
+              <source type="image/jpeg" srcset="img/unit6.jpg">
+              <img src="img/unit6.jpg" alt="Духи Флёр Наркотик" width="260" height="260">
+            </picture>
+
+            <div class="new-unit__name">Fleur Narcotique</div>
+            <div class="new-unit__new-description">
+              <div class="new-description__manufacturer">Ex Nihilo</div>
+              <div class="new-description__kind">Парфюмированная вода</div>
+              <div class="new-description__gender">Женская</div>
+            </div>
+            <div class="new-unit__price">от 4 990 Р.-</div>
+          </div>
+          <div class="news-slider__new-unit">
+            <picture>
+              <source type="image/webp" srcset="img/unit5.webp">
+              <source type="image/jpeg" srcset="img/unit5.jpg">
+              <img src="img/unit5.jpg" alt="Духи Айре Локо" width="234" height="234">
+            </picture>
+
+            <div class="new-unit__name">Aire Loco</div>
+            <div class="new-unit__new-description">
+              <div class="new-description__manufacturer">Ex Nihilo</div>
+              <div class="new-description__kind">Парфюмированная вода</div>
+              <div class="new-description__gender">Женская</div>
+            </div>
+            <div class="new-unit__price">от 3 910 Р.-</div>
+          </div>
+
+          <div class="news-slider__right-arrow">
+            <svg preserveAspectRatio="xMidYMid" viewBox="0 0 19 32">
+              <image width="19" height="32" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAgCAMAAADHYLP9AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAtFBMVEUAAADBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGcAAAAgeC5yAAAAOnRSTlMAAYqiA5euBni5CmrDD139zBVR+tUcRvbcJDzx5Csy6zMqI0fUUl5reYi4wsvTIikxOkRPW2n+d5mLS8rK+AAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAACnSURBVCjPhdLJEoJADARQcAEZQUBEEFDc9323///DnHOHKub4qqaSdGKYjWbLoNcGLJusA8BRhF2NrkfY84EgJOxHwCAmHCZAOiLMcqAYE05KoJwSzgogzwjnKZAsCOMlEK0IwwDw14Seq0faECpH45bQtjTuak3txV/vIGqER9FLfBI9n+VsF5nBVWZ1k5neZfYPuaOn3OXrLXb+qbiNb8UNmT9xa38c2BrB1hCBKQAAAABJRU5ErkJggg=="></image>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="block-special">
+        <div class="block-special__legend">Специальные предложения</div>
+        <div class="block-special__special-slider">
+          <div class="special-slider__left-arrow">
+            <svg preserveAspectRatio="xMidYMid" viewBox="0 0 19 32">
+              <image width="19" height="32" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAgCAMAAADHYLP9AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAtFBMVEUAAADBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGcAAAAgeC5yAAAAOnRSTlMAAYqiA5euBni5CmrDD139zBVR+tUcRvbcJDzx5Csy6zMqI0fUUl5reYi4wsvTIikxOkRPW2n+d5mLS8rK+AAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAACnSURBVCjPhdLJEoJADARQcAEZQUBEEFDc9323///DnHOHKub4qqaSdGKYjWbLoNcGLJusA8BRhF2NrkfY84EgJOxHwCAmHCZAOiLMcqAYE05KoJwSzgogzwjnKZAsCOMlEK0IwwDw14Seq0faECpH45bQtjTuak3txV/vIGqER9FLfBI9n+VsF5nBVWZ1k5neZfYPuaOn3OXrLXb+qbiNb8UNmT9xa38c2BrB1hCBKQAAAABJRU5ErkJggg=="></image>
+            </svg>
+          </div>
+          <div class="special-slider__special-unit border-line__special">
+            <picture>
+              <source type="image/webp" srcset="img/unit12.webp">
+              <source type="image/jpeg" srcset="img/unit12.jpg">
+              <img src="img/unit12.jpg" alt="Духи Элвейс претти" width="234" height="234">
+            </picture>
+
+            <div class="special-unit__name">8 Always pretty</div>
+            <div class="special-unit__special-description">
+              <div class="special-description__manufacturer">Ex Nihilo</div>
+              <div class="special-description__kind">Парфюмированная вода</div>
+              <div class="special-description__gender">Женская</div>
+            </div>
+            <div class="special-unit__price">от 4 990 Р.-</div>
+          </div>
+
+          <div class="special-slider__special-unit border-line__special">
+            <picture>
+              <source type="image/webp" srcset="img/unit11.webp">
+              <source type="image/jpeg" srcset="img/unit11.jpg">
+              <img src="img/unit11.jpg" alt="Духи Фанд Ди Фенди Экстреме" width="235" height="236">
+            </picture>
+
+            <div class="special-unit__name">Fand Di Fendi Extreme</div>
+            <div class="special-unit__special-description">
+              <div class="special-description__manufacturer">Ex Nihilo</div>
+              <div class="special-description__kind">Парфюмированная вода</div>
+              <div class="special-description__gender">Женская</div>
+            </div>
+            <div class="special-unit__price">от 2 390 Р.-</div>
+          </div>
+
+          <div class="special-slider__special-unit border-line__special">
+            <picture>
+              <source type="image/webp" srcset="img/unit10.webp">
+              <source type="image/jpeg" srcset="img/unit10.jpg">
+              <img src="img/unit10.jpg" alt="Духи Издевательство, а не название" width="234" height="234">
+            </picture>
+
+            <div class="special-unit__name">Tease Limited Edition Eau De Parfum</div>
+            <div class="special-unit__special-description">
+              <div class="special-description__manufacturer">Ex Nihilo</div>
+              <div class="special-description__kind">Парфюмированная вода</div>
+              <div class="special-description__gender">Женская</div>
+            </div>
+            <div class="special-unit__price">от 3 910 Р.-</div>
+          </div>
+
+          <div class="special-slider__special-unit">
+            <picture>
+              <source type="image/webp" srcset="img/unit9.webp">
+              <source type="image/jpeg" srcset="img/unit9.jpg">
+              <img src="img/unit9.jpg" alt="Духи Ноль Ноль Один" width="208" height="256">
+            </picture>
+            <div class="special-unit__name">001</div>
+            <div class="special-unit__special-description">
+              <div class="special-description__manufacturer">Ex Nihilo</div>
+              <div class="special-description__kind">Парфюмированная вода</div>
+              <div class="special-description__gender">Женская</div>
+            </div>
+            <div class="special-unit__price">от 4 990 Р.-</div>
+          </div>
+
+          <div class="special-slider__right-arrow">
+            <svg preserveAspectRatio="xMidYMid" viewBox="0 0 19 32">
+              <image width="19" height="32" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAgCAMAAADHYLP9AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAtFBMVEUAAADBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGcAAAAgeC5yAAAAOnRSTlMAAYqiA5euBni5CmrDD139zBVR+tUcRvbcJDzx5Csy6zMqI0fUUl5reYi4wsvTIikxOkRPW2n+d5mLS8rK+AAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAACnSURBVCjPhdLJEoJADARQcAEZQUBEEFDc9323///DnHOHKub4qqaSdGKYjWbLoNcGLJusA8BRhF2NrkfY84EgJOxHwCAmHCZAOiLMcqAYE05KoJwSzgogzwjnKZAsCOMlEK0IwwDw14Seq0faECpH45bQtjTuak3txV/vIGqER9FLfBI9n+VsF5nBVWZ1k5neZfYPuaOn3OXrLXb+qbiNb8UNmT9xa38c2BrB1hCBKQAAAABJRU5ErkJggg=="></image>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="block-topbrends">
+        <div class="block-topbrends__legend">Топ брендов</div>
+        <div class="block-topbrends__legend-sub"><a href="">Все бренды</a></div>
+        <div class="block-topbrends__topbrend-static">
+          <img src="img/brend6.jpg" alt="Дочка Кабана" width="202" height="78">
+          <img src="img/brend5.jpg" alt="Кэвин Клей" width="200" height="78">
+          <img src="img/brend4.jpg" alt="Абырвалг" width="199" height="76">
+          <img src="img/brend3.jpg" alt="Кристиан Дыр" width="202" height="78">
+          <img src="img/brend2.jpg" alt="НаЗвАнИе ЗаБоРчиКом" width="203" height="78">
+          <img src="img/brend1.jpg" alt="Барбэрри" width="200" height="78">
+
+        </div>
+        <div class="block-topbrends__topbrend-slider">
+          <div class="topbrend-slider__left-arrow">
+            <svg preserveAspectRatio="xMidYMid" viewBox="0 0 19 32">
+              <image width="19" height="32" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAgCAMAAADHYLP9AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAtFBMVEUAAADBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGcAAAAgeC5yAAAAOnRSTlMAAYqiA5euBni5CmrDD139zBVR+tUcRvbcJDzx5Csy6zMqI0fUUl5reYi4wsvTIikxOkRPW2n+d5mLS8rK+AAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAACnSURBVCjPhdLJEoJADARQcAEZQUBEEFDc9323///DnHOHKub4qqaSdGKYjWbLoNcGLJusA8BRhF2NrkfY84EgJOxHwCAmHCZAOiLMcqAYE05KoJwSzgogzwjnKZAsCOMlEK0IwwDw14Seq0faECpH45bQtjTuak3txV/vIGqER9FLfBI9n+VsF5nBVWZ1k5neZfYPuaOn3OXrLXb+qbiNb8UNmT9xa38c2BrB1hCBKQAAAABJRU5ErkJggg=="></image>
+            </svg>
+          </div>
+
+          <ul>
+            <li>Azzaro</li>
+            <li>Burberry</li>
+            <li>Bvlgari</li>
+            <li>Calvin Klein</li>
+            <li>Carolina Herrera</li>
+            <li>Cartier</li>
+          </ul>
+          <ul>
+            <li>Christian Dior</li>
+            <li>Dana</li>
+            <li>Davidoff</li>
+            <li>Dolce & Gabbana</li>
+            <li>Elizabeth Arden</li>
+            <li>Estee Lauder</li>
+          </ul>
+          <ul>
+            <li>Giorgio Armani</li>
+            <li>Givenchy</li>
+            <li>Gucci</li>
+            <li>Guerlain</li>
+            <li>Hugo Boss</li>
+            <li>Issey Miyake</li>
+          </ul>
+          <ul>
+            <li>Ivanka Trump</li>
+            <li>Jean Paul Gaultier</li>
+            <li>Juicy Couture</li>
+            <li>Lancome</li>
+            <li>Liz Claiborne</li>
+            <li>Mont Blanc</li>
+          </ul>
+          <ul>
+            <li>Paco Rabanne</li>
+            <li>Parfums De Coeur</li>
+            <li>Ralph Lauren</li>
+            <li>Thierry Mugler</li>
+            <li>Versace</li>
+            <li>Yves Saint Laurent</li>
+          </ul>
+
+          <div class="topbrend-slider__right-arrow">
+            <svg preserveAspectRatio="xMidYMid" viewBox="0 0 19 32">
+              <image width="19" height="32" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAgCAMAAADHYLP9AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAtFBMVEUAAADBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGcAAAAgeC5yAAAAOnRSTlMAAYqiA5euBni5CmrDD139zBVR+tUcRvbcJDzx5Csy6zMqI0fUUl5reYi4wsvTIikxOkRPW2n+d5mLS8rK+AAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAACnSURBVCjPhdLJEoJADARQcAEZQUBEEFDc9323///DnHOHKub4qqaSdGKYjWbLoNcGLJusA8BRhF2NrkfY84EgJOxHwCAmHCZAOiLMcqAYE05KoJwSzgogzwjnKZAsCOMlEK0IwwDw14Seq0faECpH45bQtjTuak3txV/vIGqER9FLfBI9n+VsF5nBVWZ1k5neZfYPuaOn3OXrLXb+qbiNb8UNmT9xa38c2BrB1hCBKQAAAABJRU5ErkJggg=="></image>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="block-articles">
+        <div class="block-articles__legend">Статьи и новости</div>
+        <div class="block-articles__columns-articles">
+          <div class="columns-articles__left-column-articles">
+            <div class="left-column-articles__item">
+              <h3>Парфюмерия в нашей жизни</h3>
+              <div class="item__data">26 апреля 2017</div>
+              <p>Как ароматы могут влиять на ваше настроение, самочувствие, деловые отношения и любовные завоевания? Все секреты магической силы различных парфюмов, вы, сможете&nbsp;открыть для себя, прочитав эту статью!</p>
+            </div>
+            <div class="left-column-articles__item">
+              <h3>Топ женских ароматов - Весна 2016</h3>
+              <div class="item__data">26 апреля 2017</div>
+              <p>Как ароматы могут влиять на ваше настроение, самочувствие, деловые отношения и любовные завоевания? Все секреты магической силы различных парфюмов, вы, сможете&nbsp;открыть для себя, прочитав эту статью!</p>
+            </div>
+            <div class="left-column-articles__item">
+              <h3>Победители парфюмерных премий Art and Olfaction
+            Awards&nbsp;2014 и Canadian Fragrance Awards 2014</h3>
+              <div class="item__data">26 апреля 2017</div>
+              <p>В Канаде прошло награждения победителей девятой ежегодной премии ароматов «Canadian Fragrance Awards 2014».</p>
+            </div>
+            <a href="#">смотреть все статьи</a>
+          </div>
+          <div class="columns-articles__right-column-articles">
+            <div class="right-column-articles__news-item">
+              <div class="news-item__img-one">
+                <img src="img/news3.jpg" alt="Геша Шоен, Марк Бакстон и Бетранд Дачафо" width="252" height="185">
+              </div>
+              <div class="news-item__text">
+                <h3>Geza Shoen, Mark Buxton и Bertrand Duchaufour</h3>
+                <div class="text__data">26 апреля 2017</div>
+                <p>три поистине великих парфюмера, объединили свои общие труды и выпустили коллекция под названием Renegades.</p>
+              </div>
+            </div>
+
+            <div class="right-column-articles__news-item">
+              <div class="news-item__text two-text">
+                <h3>No Ordinary Man от Korloff Paris</h3>
+                <div class="text__data">26 апреля 2017</div>
+                <p>мужской аромат выпущенный в 2016 году воплощает силу духа и отвагу</p>
+              </div>
+              <div class="news-item__img-two">
+                <img src="img/news1.jpg" alt="Корлофф, это Карлофф, Карл!" width="252" height="185">
+              </div>
+            </div>
+
+            <div class="right-column-articles__news-item">
+              <div class="news-item__img-one">
+                <img src="img/news2.jpg" alt="Геша Шоен, Марк Бакстон и Бетранд Дачафо" width="252" height="185">
+              </div>
+              <div class="news-item__text">
+                <h3>Новый аромат представляет собой</h3>
+                <div class="text__data">26 апреля 2017</div>
+                <p>Новинка 2016 года для мужчин от торгового дома Amouage - Bracken for Men. обладателя.</p>
+              </div>
+            </div>
+            <a href="#">смотреть все новости</a>
+          </div>
+        </div>
+    </div></main>
+    <footer class="block-footer">
+      <div class="block-footer__flex-columns">
+        <div class="flex-columns__info-company">
+          <h3>о компании</h3>
+          <ul>
+            <li><a href="#">О магазине</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Статьи</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Информация о заказах</a></li>
+          </ul>
+        </div>
+        <div class="flex-columns__column-catalog">
+          <h3>каталог</h3>
+          <ul>
+            <li><a href="#">Женская парфюмерия</a></li>
+            <li><a href="#">Мужская парфюмерия</a></li>
+            <li><a href="#">Новинки</a></li>
+            <li><a href="#">Средства ухода</a></li>
+            <li><a href="#">Селективная косметика</a></li>
+            <li><a href="#">Духи для дома</a></li>
+            <li><a href="#">Винтаж</a></li>
+          </ul>
+        </div>
+        <div class="flex-columns__column-contact">
+          <h3>+7 /495/ 542-05-9</h3>
+          <div class="column-contact__messenger">
+            <p>Мы доступны также</p>
+            <svg preserveAspectRatio="xMidYMid" viewBox="0 0 26 26" class="messenger__wasap">
+              <image width="26" height="26" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABm1BMVEUAAABlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFRlvFQAAABabRAuAAAAh3RSTlMAI3q76PfTnE0FKLDiaAIBdPq9bDYXECZQlOvGHp28LgnyLZD+1OkgVGIRyQQM55ETKiHxcwovXW0H1wZTJPwyjqBa4StK1nuWeYYf9b98Zo0ZZZqhDRXQmCI8NPQDpcR9d7SBq8zDrD5BFlwSf5fY7f1Mgzi+5tlvG1Yzx8DNtYhDmzc1S0UnHgx/AAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAZJJREFUKM9dkmlfUlEQhwdByULhuhCaS2pG6hUX1NQSpXJLLFs0U8g2zV0oNdu00ny+tudeLnJo3sz8f8/MnDlzjohjriK3B4pLvFdKpcCuXuPSfGXleeAPGFBRWVUdvB6qqYUbdTlSXg8NjTl1M9CEp9kRLdwK+LXurlZuh+3oDrQVntzeSoepfGeELuW6e7TC3iiVyvXh6xcZiHJXqxskMiQybCe4oUND9yLclxFiQRVH1YVGNTZGXB5ksx+C8UhD40zIpMLKpmBaH9KFIY9pscKZBLPafiQI8gSvHT+FOQ09U+g5DVnxAl7Oy8KrxdeWWsInyyRNG6XeQGR6BWJvlXrHezFrCTlb/hDLvspHJVYZFKlhLbeigU/qcUisi2xgbIqEDbYuT99uW9yZERkqYdeSe5TJf+YlvaBcM5nNQpDqIvPZCr5QIf79LTO/iAOcPnvEdw/h69E3S5nr9QbJ7zb5Yc+bTltf6eev44TyJyPZ8t9wOPUn1Xm0lrGTPH9Pc51n55actfaf/Qud9+anuQATP23hYXoKHQAAAABJRU5ErkJggg=="></image>
+            </svg>
+            <svg preserveAspectRatio="xMidYMid" viewBox="0 0 19 20" class="messenger__viber">
+              <image width="19" height="20" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAMAAABYi/ZGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABSlBMVEUAAACEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqWEVqUAAAC/uHhtAAAAbHRSTlMAUaZsVePGn14NA4AIIUOF130FlEoLDoPIHPvoD0bexY4qRdIX7oJphgG4zAytipxOMZptwCwH0zAlucOZWNhcvj7WR7R/nVBadyj5BAJJjcsKCSmTqdAifP7qdPWMgcoZEOQz5eD3HYv9pxQz4Kg/AAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAQFJREFUGNNN0Os7AkEUBvAXaXVT2EpsZSV00SKSbpS7CuUe5U4x///nzsyurffT+/yeM8+cGQAjo2OAZdwqTdigxy4xxhyA0zXp9kxNC5thPDK8PnL/bIDbnLB5JRgKL6hYjCyRRYWxZSCw4lmNyXEySbcE1CScaylo68CGbptIh7a2MzvZ3RwN5jkV7NSKpdiehn0vUOaWFTuU1GQF7gNqh2RHwo5PUMHpGbXzKmNRsVetjrh6cclrmgavFN4adaV5fSPO3BLe3QMPj62nmvHmhpXwud3ht728GviWYGbePwy05Qb4if8v85tWhRn5yzBtYGg6vjlFfBjOT7fV+/1DH8eORZ301RFTAAAAAElFTkSuQmCC"></image>
+            </svg>
+          </div>
+          <p class="column-contact__timing">В рабочее время c 9.00 до 21.00</p>
+          <div class="column-contact__contacts-flex">
+            <a href="#" class="contacts-flex__feedback">
+              <svg preserveAspectRatio="xMidYMid" viewBox="0 0 9 11">
+                <image width="9" height="11" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAALCAMAAACah1cpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAdVBMVEUAAADBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGcAAAAfZ+B+AAAAJXRSTlMAlOf4K+9wmvfqQtJ9iuQOHvqrA3+8eeuYBwKlxAF8+dwghvY193/H8AAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABLSURBVAjXJcpVEoAwFEPRh0uB4u6Q/W+R0tyvM5mI43q+2AIgpABEVIwkpRQyQnIUmior1A3ZAl0/jJPIvOBvNeO2H0anPVy3et4P2jcFZd6Zvc0AAAAASUVORK5CYII="></image>
+              </svg>
+              Обратный звонок
+            </a>
+            <a href="mailto:Info@Lenoma.ru" class="contacts-flex__mail">
+              <svg preserveAspectRatio="xMidYMid" viewBox="0 0 14 11">
+                <image width="14" height="11" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAALCAMAAAB4W0xQAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAdVBMVEUAAADBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGcAAAAfZ+B+AAAAJXRSTlMAv/prQGyy8C3xsTLmIyTnsDAJwNwZGt0ID87WS80VtP4UDmS89KkqpwAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABeSURBVAjXTc5HEoAgEETRBnPOGRWVuf8VFVPxF131dg1GRgzELfvN4QRyPR93fhBejMI40UqzPLpYlFXdAG3H+kITwzgJMc0DHmJZpXQ3fAT2Xe/PJ83D/jsIynylTkNmCoph7PFbAAAAAElFTkSuQmCC"></image>
+              </svg>
+              Info@Lenoma.ru
+            </a>
+            <a href="skype:lenoma.ru" class="contacts-flex__skype">
+              <svg preserveAspectRatio="xMidYMid" viewBox="0 0 8 10">
+                <image width="8" height="10" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAKCAMAAAC+Ge+yAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAApVBMVEUAAADBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGcAAAB/8wIkAAAANXRSTlMAAW7U/f7QWnr3rr1NzGSPk7jicDAJaxoz6umACg1mrO6rsgKE9FVZ8oL7ub/8iG3V+th1A6eEW8kAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAV0lEQVQI1wXBiQJCQABF0StT2lGhnTEhKq3v/3+tc/AGvhmOAhhrMp1JcxZaQqiIWKv1JkkztjtJ+8MRTue8kCylBXeRoVINja606m73h3rc8/U2n+/vD0d+CP/PYS/sAAAAAElFTkSuQmCC"></image>
+              </svg>
+              skype: lenoma.ru
+            </a>
+          </div>
+        </div>
+        <div class="flex-columns__column-subscribe">
+          <h3>подписаться на новости</h3>
+          <form action="" method="get" class="column-subscribe__subscribe-form">
+            <input name="e" placeholder="введите email" type="email">
+            <button type="submit">подписаться</button>
+          </form>
+          <div class="column-subscribe__instagramm">
+            <div class="instagramm__circle">
+              <svg preserveAspectRatio="xMidYMid" viewBox="0 0 26 26">
+                <image width="26" height="26" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmFBMVEUAAABwJMRwJMRwJMRwJMR2I752I75+IrZ+IrZ+IrZ+IrZ+IraGIa6GIa6GIa6OIKeOIKeOIKeOIKeOIKeOIKeWH5+WH5+WH5+WH5+WH5+eHpeeHpeeHpeeHpeeHpeeHpeeHpemHZCmHZCmHZCmHZCmHZCmHZCmHZCmHZCuHIiuHIiuHIiuHIi2G4G2G4G2G4G2G4G2G4G+Gnm+Gnm+Gnm+GnnCHHLCHHLCHHLDI23DI23DI23DI23EKmjEKmjEKmjEKmjEMGPEMGPEMGPFN17FN17FN17FN17GPVjGPVjGPVjGPVjGPVjGRFPGRFPGRFPGRFPHS07HS07HS07HS07KVEvKVEvKVEvKVEvKVEvNXknNXknQaUfQaUfQaUfTc0XTc0XTc0XXfUPXfUPXfUPXfUPXfUPah0Hah0HdkT/dkT/dkT/dkT9wJMR2I75+IraGIa6OIKeWH5+eHpemHZCuHIi2G4G+GnnCHHLDI23EKmjEMGPFN17GPVjGRFPHS07KVEvNXknQaUfTc0XXfUPah0HdkT8AAABQbQ7MAAAAbXRSTlMATavn/he/F+DWrKC/0TVN0QwBFQmrNY33DufWMmyJwCD+rB3BTduxBKAd5fmgwcs+AqAyywqgbD6gifkCoIn5AqBsPqAyywqgwcs+AqAd5fn+rB3B59YybImrNU3RDL/RNRfg1qygF79Nq+f+d9299gAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAG2SURBVCjPZZBlUwJRFIaPDZjYrWBjoGIXKgiY2F2ICljAwnYgob/bc3cZZpDnw31raxYAKSouKf3MUVpSXAQaZeVfBZSXkaVCFw6H9YbKHAY9FroKnKoikeoayKOmOhKpAqiNRuuMeUN9Q6OxLhqthSaKas6/p4VqbWumqCZoj3Vkq86u7u6uToCeWKwXOmLtYIqb1aGvP67S3zcwODQM5rgJaHqELJZRmqbHxvAYtZA8QtPAMOPETjCMdXJqatLKMBMkjzMMsOw0OhvLzsySanaGZW2o0ywLHDeHbp7jFrSPWeC4eZQ5jgOeX0S3xC+vaNPKMr+EssjzIAir6NYE+7o2rduFNZRVQQBR3EC3KYoObXKI4ibKhiiCJDnRbUmSy00Wt0uStlCdkgSy7CHVtizv7O7t7e7I8jbJHlkGRdkn9sCrKMrhIR7eA5L3FQWOEsfqO05OEyqnJ2o8ThzB2fd59vdeXF5dXV5kw/n3GVwnkzdQwE0yeQ23qdTd/f/l/i6VugV4SKcfffmL7zGdfkB98mcymeeX1xwvz1j4n8g1geBPAcFA9gGht/eP3xwf728h0v4BZlOMo79YgAEAAAAASUVORK5CYII="></image>
+              </svg>
+            </div>
+            <p>присоединяйтесь к нам</p>
+          </div>
+        </div>
+      </div>
+      <div class="block-footer__made">
+        <p>© 2017. Lenoma.ru</p>
+        <div class="made__frontend">
+          <svg preserveAspectRatio="xMidYMid" viewBox="0 0 15 20">
+            <image width="15" height="20" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAUCAMAAABlGZcgAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA/1BMVEUAAADBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGfBoGcAAAA2lVMyAAAAU3RSTlMABma+8L8w3N0y9f6oXEAJ3+o4bsWrxvRhV0hLXfNT9ujp91J1giKBcuyuzwI30Ep2J5e8d7G0D8lpaArAHh0LFmCs8RiUli+p4DGbeDTuEj3U1g2BdXYAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAA3ElEQVQY0z2P6VbCYAxEB6woLQilgihqXXBrQQWXouK+oaCi9/3fxa/tofMnuTmTk4kk5fJzFtZ8PqdEhQVSLRZiLNo4pfJSueRgF6VKFbeW+Gou1Yo8nBTNwMHTMnXNVKehFZpaXTPQWleTDcGm/C3D2zvaBbm01WBv/8B4DzlSQNjp2ua63e0cE+gETtXrn/V7OoeWdIHZiNWGS1OiAVyZeg2DKJ7fDPFvdeczvE9jPFgEj088v8xyvSbvvWU530fhRzj6zLg4nniT8VfG0bexWz8Za/rL3zTp/gFULCUBW87GfgAAAABJRU5ErkJggg=="></image>
+          </svg>
+          <p>Разработка и поддержка — «ЭВРИКА»</p>
+        </div>
+      </div>
+    </footer>
+    </div>
+</body>
+
+</html>

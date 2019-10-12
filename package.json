@@ -1,0 +1,29 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "description": "Тестовый проект для Эврика",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Константин Полуянов",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.6.4",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^6.1.1",
+    "gulp-less": "^4.0.1",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-webp": "^4.0.1",
+    "posthtml": "^0.11.6"
+  }
+}
